@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        nodejs(nodeJSInstallationName: 'node-14.17.6', configId: 'third-party') {
+        nodejs(nodeJSInstallationName: 'node-14.17.6') {
           sh 'npm config ls'
         }
       }
