@@ -4,13 +4,13 @@ pipeline {
       label 'agent1'
     }
   }
+
+  tools { nodejs "node-14.17.6" }
  
   stages {
     stage('Example') {
       steps {
-        nodejs(nodeJSInstallationName: 'node-14.17.6') {
-          sh 'npm config ls'
-        }
+        sh 'npm config ls'
       }
     }
   }
