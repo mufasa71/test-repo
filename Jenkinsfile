@@ -1,16 +1,14 @@
 pipeline {
-  agent {
-    docker {
-      image 'alpine/git:v2.30.2'
+  agent any
+    node {
+      label 'agent1'
     }
   }
- 
-  tools { nodejs "node" }
  
   stages {
     stage('Example') {
       steps {
-        sh 'npm config ls'
+        sh 'echo Hello world!'
       }
     }
   }
