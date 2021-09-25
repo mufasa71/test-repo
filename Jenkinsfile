@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'alpine/git:v2.30.2'
+    }
+  }
  
   tools { nodejs "node" }
  
